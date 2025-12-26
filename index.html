@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Grading System Explained | 2025 Guide</title>
+    <meta name="description" content="A comprehensive guide to understanding university grading systems, GPA vs CGPA, and academic rankings in 2025.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent: #8b5cf6;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Antigravity Aesthetics */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 40%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Glassmorphism utility */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-10px) translateX(-50%);}
+            60% {transform: translateY(-5px) translateX(-50%);}
+        }
+
+        /* Typography */
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dim);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent);
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            color: #fff;
+            border-bottom-style: solid;
+        }
+
+        /* Layout Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .hero-title { font-size: 3rem; }
+        }
+
+        /* Tips Section */
+        .tip-list {
+            list-style: none;
+        }
+
+        .tip-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .tip-icon {
+            margin-right: 1rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            display: none;
+            color: var(--text-dim);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 1.5rem;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 4rem;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg"></div>
+
+    <header>
+        <div class="container">
+            <h1 class="hero-title fade-in">University Grading Systems</h1>
+            <p class="hero-subtitle fade-in">Everything you need to know about academic metrics in 2025.</p>
+            <div class="scroll-indicator">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- GPA vs CGPA Section -->
+        <section id="basics" class="fade-in">
+            <h2>GPA vs CGPA</h2>
+            <div class="glass-card">
+                <div class="grid-2">
+                    <div>
+                        <h3>Understanding GPA</h3>
+                        <p>Grade Point Average (GPA) is a number that represents the average value of the accumulated final grades earned in courses over a specific term or semester. It is usually calculated on a scale from 0 to 4.0 or 0 to 5.0.</p>
+                        <p><strong>Example:</strong> If you take 4 courses in a semester and get Grade A (4.0) in all, your GPA for that semester is 4.0.</p>
+                    </div>
+                    <div>
+                        <h3>Understanding CGPA</h3>
+                        <p>Cumulative Grade Point Average (CGPA) is the mean of the GPA obtained in all the semesters of a course after the completion of the academic program. It provides an overall view of your academic performance throughout your university journey.</p>
+                        <p>To really excel, it is essential to <a href="https://cgpahub.com">understand your CGPA</a> and how individual semester fluctuations might impact your final graduation honors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranking and Placements Section -->
+        <section id="rankings" class="fade-in">
+            <h2>Academic Rankings & Placements</h2>
+            <div class="glass-card">
+                <h3>Why Your Grades Matter</h3>
+                <p>In the competitive landscape of 2025, grading systems play a pivotal role in university internal rankings and corporate recruitment processes. Corporations often set a minimum "cutoff" CGPA for campus placements to filter candidates efficiently.</p>
+                <div class="grid-2">
+                    <div class="tip-item">
+                        <span class="tip-icon">✓</span>
+                        <p><strong>Scholarships:</strong> High CGPA is often the primary criterion for merit-based financial aid.</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">✓</span>
+                        <p><strong>Higher Education:</strong> Master's and PhD programs use GPA to assess your research potential.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conversion Confusion Section -->
+        <section id="confusion" class="fade-in">
+            <h2>Common Conversion Confusion</h2>
+            <div class="glass-card">
+                <p>One of the most frequent challenges students face is converting their GPA to CGPA or to a percentage scale. Since different universities use different weighting systems (some use weighted credits, others don't), the math can get tricky.</p>
+                <p><strong>Common Pitfall:</strong> Averaging your GPAs across semesters without accounting for the number of credits in each semester. Always multiply your grade by the credit weight for accuracy.</p>
+            </div>
+        </section>
+
+        <!-- Academic Tips Section -->
+        <section id="tips" class="fade-in">
+            <h2>Helpful Academic Tips</h2>
+            <div class="tip-list">
+                <div class="glass-card">
+                    <div class="tip-item">
+                        <span class="tip-icon">01</span>
+                        <div>
+                            <h3>Consistency is Key</h3>
+                            <p>It's much harder to raise a low CGPA in final years than to maintain a steady one from the start.</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">02</span>
+                        <div>
+                            <h3>Credit Weighting</h3>
+                            <p>Focus more on high-credit courses as they have a larger impact on your final average.</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">03</span>
+                        <div>
+                            <h3>Office Hours</h3>
+                            <p>Personal interaction with professors can help clarify grading rubrics that aren't apparent in the syllabus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="fade-in">
+            <h2>Frequently Asked Questions</h2>
+            <div class="glass-card">
+                <div class="faq-item">
+                    <div class="faq-question">What is the difference between Semester GPA and CGPA? <span>+</span></div>
+                    <div class="faq-answer">Semester GPA covers one term, while CGPA covers your entire duration of study across all terms combined.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do employers look at my GPA or CGPA? <span>+</span></div>
+                    <div class="faq-answer">Most employers look at your final CGPA as it represents consistency over 3-4 years.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I improve my CGPA after graduation? <span>+</span></div>
+                    <div class="faq-answer">Generally, no. Your CGPA is finalized once you graduate. However, you can take bridge courses or certifications to enhance your profile.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How are 'F' grades handled in CGPA? <span>+</span></div>
+                    <div class="faq-answer">A failing grade counts as 0 points in the average, significantly pulling down your cumulative score until the subject is cleared and replaced (if the university allows grade replacement).</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Educational Grading Guide. All rights reserved.</p>
+            <p class="disclaimer">Disclaimer: Grading policies vary by institution and country. Always refer to your university's official handbook for the most accurate calculation methods.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const span = item.querySelector('span');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    span.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    span.textContent = '-';
+                }
+            });
+        });
+
+        // Trigger animations for elements in view immediately
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
